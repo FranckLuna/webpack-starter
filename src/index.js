@@ -2,13 +2,10 @@ import './style.css';
 import {Todo, TodoList} from './clases';
 import { crearTodoHtml } from './js/componentes';
 
-
 export const todoList = new TodoList();
 
-const tarea = new Todo('Aprender javaScript !!!!');
+todoList.todos.forEach( todo => crearTodoHtml( todo ) );
 
-todoList.nuevoTodo( tarea );
+console.log(todoList.todos);
 
-console.log( todoList );
-
-crearTodoHtml(tarea);
+//todoList.todos.forEach(crearTodoHtml);
